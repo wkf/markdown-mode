@@ -1231,27 +1231,27 @@ Group 5 matches the reference label.")
   "Regexp identifying Markdown headers.")
 
 (defconst markdown-regex-header-1-atx
-  "^\\(#\\)[ \t]*\\([^\\.].*?\\)[ \t]*\\(#*\\)$"
+  "^\\(\\)\\(#\\)[ \t]*\\([^\\.].*?\\)[ \t]*\\(#*\\)$"
   "Regular expression for level 1 atx-style (hash mark) headers.")
 
 (defconst markdown-regex-header-2-atx
-  "^\\(##\\)[ \t]*\\(.+?\\)[ \t]*\\(#*\\)$"
+  "^\\(#\\)\\(#\\)[ \t]*\\(.+?\\)[ \t]*\\(#*\\)$"
   "Regular expression for level 2 atx-style (hash mark) headers.")
 
 (defconst markdown-regex-header-3-atx
-  "^\\(###\\)[ \t]*\\(.+?\\)[ \t]*\\(#*\\)$"
+  "^\\(##\\)\\(#\\)[ \t]*\\(.+?\\)[ \t]*\\(#*\\)$"
   "Regular expression for level 3 atx-style (hash mark) headers.")
 
 (defconst markdown-regex-header-4-atx
-  "^\\(####\\)[ \t]*\\(.+?\\)[ \t]*\\(#*\\)$"
+  "^\\(###\\)\\(#\\)[ \t]*\\(.+?\\)[ \t]*\\(#*\\)$"
   "Regular expression for level 4 atx-style (hash mark) headers.")
 
 (defconst markdown-regex-header-5-atx
-  "^\\(#####\\)[ \t]*\\(.+?\\)[ \t]*\\(#*\\)$"
+  "^\\(####\\)\\(#\\)[ \t]*\\(.+?\\)[ \t]*\\(#*\\)$"
   "Regular expression for level 5 atx-style (hash mark) headers.")
 
 (defconst markdown-regex-header-6-atx
-  "^\\(######\\)[ \t]*\\(.+?\\)[ \t]*\\(#*\\)$"
+  "^\\(#####\\)\\(#\\)[ \t]*\\(.+?\\)[ \t]*\\(#*\\)$"
   "Regular expression for level 6 atx-style (hash mark) headers.")
 
 (defconst markdown-regex-header-1-setext
@@ -1403,22 +1403,28 @@ on the value of `markdown-wiki-link-alias-first'.")
                                           (2 markdown-header-rule-face)))
    (cons markdown-regex-header-6-atx '((1 markdown-header-delimiter-face)
                                        (2 markdown-header-face-6)
-                                       (3 markdown-header-delimiter-face)))
+                                       (3 markdown-header-face-6)
+                                       (4 markdown-header-delimiter-face)))
    (cons markdown-regex-header-5-atx '((1 markdown-header-delimiter-face)
                                        (2 markdown-header-face-5)
-                                       (3 markdown-header-delimiter-face)))
+                                       (3 markdown-header-face-5)
+                                       (4 markdown-header-delimiter-face)))
    (cons markdown-regex-header-4-atx '((1 markdown-header-delimiter-face)
                                        (2 markdown-header-face-4)
-                                       (3 markdown-header-delimiter-face)))
+                                       (3 markdown-header-face-4)
+                                       (4 markdown-header-delimiter-face)))
    (cons markdown-regex-header-3-atx '((1 markdown-header-delimiter-face)
                                        (2 markdown-header-face-3)
-                                       (3 markdown-header-delimiter-face)))
+                                       (3 markdown-header-face-3)
+                                       (4 markdown-header-delimiter-face)))
    (cons markdown-regex-header-2-atx '((1 markdown-header-delimiter-face)
                                        (2 markdown-header-face-2)
-                                       (3 markdown-header-delimiter-face)))
+                                       (3 markdown-header-face-2)
+                                       (4 markdown-header-delimiter-face)))
    (cons markdown-regex-header-1-atx '((1 markdown-header-delimiter-face)
                                        (2 markdown-header-face-1)
-                                       (3 markdown-header-delimiter-face)))
+                                       (3 markdown-header-face-1)
+                                       (4 markdown-header-delimiter-face)))
    (cons 'markdown-match-multimarkdown-metadata '((1 markdown-metadata-key-face)
                                                   (2 markdown-metadata-value-face)))
    (cons 'markdown-match-pandoc-metadata '((1 markdown-comment-face)
